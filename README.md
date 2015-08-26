@@ -30,7 +30,7 @@ $ gem install jekyll-babel
 
 ## Usage
 
-In your Jekyll site, create CoffeeScript files that start with the following
+In your Jekyll site, create Babel files that start with the following
 lines:
 
 ```
