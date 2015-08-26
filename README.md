@@ -4,6 +4,8 @@ A Babel converter for Jekyll.
 
 [![Build Status](https://travis-ci.org/thejameskyle/jekyll-babel.svg?branch=master)](https://travis-ci.org/thejameskyle/jekyll-babel)
 
+> Based on [jekyll-coffeescript](https://github.com/jekyll/jekyll-coffeescript) by @parkr.
+
 ## Installation
 
 Add this line to your application's Gemfile:
