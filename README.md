@@ -14,16 +14,23 @@ Add this line to your application's Gemfile:
 gem 'jekyll-babel'
 ```
 
-And then execute:
+Then execute:
 
 ```bash
 $ bundle
 ```
 
-Or install it yourself as:
+You may also skip using a Gemfile and install it yourself as:
 
 ```bash
 $ gem install jekyll-babel
+```
+
+Finally, in you Jekyll's \_config.yml file, add:
+
+```yml
+gems:
+  - jekyll-babel
 ```
 
 **Notes: `jekyll-babel` requires Ruby 1.9.3 or greater. Additionally, the dependency on `execjs` means you must also have a [valid JavaScript runtime](https://github.com/sstephenson/execjs#execjs) available to your project**
