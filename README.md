@@ -30,7 +30,7 @@ $ gem install jekyll-babel
 
 ## Usage
 
-In your Jekyll site, create Babel files that start with the following
+In your Jekyll site, create Babel-aware files that start with the following
 lines:
 
 ```
@@ -41,6 +41,16 @@ lines:
 You need those three dashes in order for Jekyll to recognize it as
 "convertible". They won't be included in the content passed to the Babel
 compiler.
+
+## Options
+
+Files with extensions .js, .es6, .babel and .jsx will be processed. You may
+customize the list of white-listed extensions in your _config.yml, by providing
+a string of comma-separated values:
+
+```yml
+babel_js_extensions: 'es6, babel, jsx' # Do not process .js files
+```
 
 ## Contributing
 
