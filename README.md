@@ -2,7 +2,7 @@
 
 A Babel converter for Jekyll.
 
-[![Build Status](https://travis-ci.org/thejameskyle/jekyll-babel.svg?branch=master)](https://travis-ci.org/thejameskyle/jekyll-babel)
+[![Build Status](https://travis-ci.org/babel/jekyll-babel.svg?branch=master)](https://travis-ci.org/babel/jekyll-babel)
 
 > Based on [jekyll-coffeescript](https://github.com/jekyll/jekyll-coffeescript) by @parkr.
 
