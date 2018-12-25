@@ -5,7 +5,8 @@ module Jekyll
       priority :low
 
       DEFAULT_CONFIGURATION = {
-        'babel_js_extensions' => 'js, es6, babel, jsx'
+        'babel_js_extensions' => 'js, es6, babel, jsx',
+        'babel_js_options' => {}
       }
 
       def initialize(config = {})
@@ -22,6 +23,7 @@ module Jekyll
 
       def convert(content)
         ::Babel::Transpiler.transform(content)['code']
+        ::Babel::Transpiler.transform(content, @config['babel_js_options'])['code']
       end
 
       private
