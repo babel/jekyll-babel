@@ -56,7 +56,7 @@ babel_js_extensions: 'es6, babel, jsx' # Do not process .js files
 
 ## Contributing
 
-1. Fork it ([`https://github.com/thejameskyle/jekyll-babel/fork`](https://github.com/thejameskyle/jekyll-babel/fork))
+1. Fork it ([`https://github.com/babel/jekyll-babel/fork`](https://github.com/babel/jekyll-babel/fork))
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am "Add some feature"`)
 4. Push to the branch (`git push origin my-new-feature`)
