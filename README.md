@@ -54,6 +54,14 @@ Files with extensions `.es6`, `.babel` and `.jsx` will be processed. You may cus
 babel_js_extensions: 'es6, babel, jsx' # Do not process .js files
 ```
 
+You can also pass custom [Babel options](https://babeljs.io/docs/en/options) by adding the following to your \_config.yml:
+
+```yml
+babel_js_options:
+  comments: false
+  compact: true
+```
+
 ## Contributing
 
 1. Fork it ([`https://github.com/babel/jekyll-babel/fork`](https://github.com/babel/jekyll-babel/fork))
