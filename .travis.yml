@@ -1,14 +1,15 @@
 language: ruby
 cache: bundler
 install:
-- script/rebund download
-- bundle install --path vendor/bundle
+  - script/rebund download
+  - bundle install --path vendor/bundle
 rvm:
-- 2.1.0
-- 2.0.0
+  - 2.2
+  - 2.1
+  - 2.0
 script: script/cibuild
 after_script:
-- script/rebund upload
+  - script/rebund upload
 notifications:
   # irc:
   #   on_success: change
