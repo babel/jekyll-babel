@@ -2,9 +2,17 @@ require 'spec_helper'
 
 describe(Jekyll::Converters::Babel) do
   let(:configuration) { Jekyll::Configuration::DEFAULTS }
+  let(:custom_configuration) { Jekyll::Utils.deep_merge_hashes(Jekyll::Configuration::DEFAULTS, {
+    'babel_js_options' => {
+      'comments' => false
+    }
+  }) }
   let(:converter) do
     Jekyll::Converters::Babel.new(configuration)
   end
+  let(:converter_custom_options) {
+    Jekyll::Converters::Babel.new(custom_configuration)
+  }
   let(:babel_content) do
     <<-BABEL
 /* Functions: */
@@ -39,6 +47,25 @@ var math = {
 };
 JS
   end
+  let(:js_custom_content) do
+    <<-JS
+"use strict";
+
+var square = function square(x) {
+  return x * x;
+};
+
+var list = [1, 2, 3, 4, 5];
+
+var math = {
+  root: Math.sqrt,
+  square: square,
+  cube: function cube(x) {
+    return x * square(x);
+  }
+};
+JS
+  end
 
   context "matching file extensions" do
     it "matches .babel files" do
@@ -58,4 +85,9 @@ JS
     end
   end
 
+  context "accepts custom options" do
+    it "produces JS" do
+      expect(converter_custom_options.convert(babel_content)).to eql(js_custom_content.chomp)
+    end
+  end
 end
