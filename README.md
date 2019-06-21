@@ -58,8 +58,8 @@ You can also pass custom [Babel options](https://babeljs.io/docs/en/options) by 
 
 ```yml
 babel_js_options:
-  comments: false
-  compact: true
+  comments: false # Type: boolean | Default: true
+  compact: true # Type: boolean | Default: "auto"
 ```
 
 ## Contributing
