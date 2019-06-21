@@ -11,9 +11,10 @@ install:
   - bundle install
 
 rvm:
-  - 2.5
-  - 2.4
-  - 2.3
+  - 2.6.3
+  - 2.5.5
+  - 2.4.6
+  - 2.3.8
 
 after_script:
   - script/rebund upload
