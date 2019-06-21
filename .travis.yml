@@ -1,13 +1,20 @@
-language: ruby
+script: script/cibuild
 cache: bundler
+language: ruby
+
+before_install:
+  - gem update --system
+  - gem install bundler
+
 install:
   - script/rebund download
-  - bundle install --path vendor/bundle
+  - bundle install
+
 rvm:
-  - 2.2
-  - 2.1
-  - 2.0
-script: script/cibuild
+  - 2.5
+  - 2.4
+  - 2.3
+
 after_script:
   - script/rebund upload
 notifications:
@@ -18,8 +25,6 @@ notifications:
   #   - irc.freenode.org#jekyll
   #   template:
   #   - '%{repository}#%{build_number} (%{branch}) %{message} %{build_url}'
-  # email:
-  #   on_success: never
-  #   on_failure: never
+  email: false
 env:
   global:
